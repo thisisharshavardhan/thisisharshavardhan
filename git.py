@@ -31,4 +31,4 @@ for i in range(days):
     os.system(f'git commit --date="{formatted_date}" -m "Automated commit for {formatted_date}"')
 
                                             # Push changes to GitHub
-os.system("git push origin main")
+    os.system("git push origin main")
