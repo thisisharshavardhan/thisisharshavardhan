@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/8374b7cc-077b-4478-8489-88b089e6df6d)
+
+
 ### Hi there i'm HARSHAVARDHAN K 👋
 
 **Languages I have used**
