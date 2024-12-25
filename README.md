@@ -1,5 +1,7 @@
-![image](https://downloadscdn5.freepik.com/download_vector/svg/138/138676/11/11602/11602236_21004063.svg?token=exp=1735137386~hmac=295aa27eb271fe5887e280578783aa0c&filename=11602236_21004063.svg)
-
+(https://downloadscdn5.freepik.com/download_vector/svg/138/138676/11/11602/11602236_21004063.svg?token=exp=1735137386~hmac=295aa27eb271fe5887e280578783aa0c&filename=11602236_21004063.svg)
+<p align="center">
+<br><img src="https://github.com/chiraag-kakar/chiraag-kakar/blob/master/hadder.gif" width="280px"><br><br>
+</p>
 
 ### Hi there i'm HARSHAVARDHAN K 👋
 
