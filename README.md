@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8374b7cc-077b-4478-8489-88b089e6df6d)
+![image](https://downloadscdn5.freepik.com/download_vector/svg/138/138676/11/11602/11602236_21004063.svg?token=exp=1735137386~hmac=295aa27eb271fe5887e280578783aa0c&filename=11602236_21004063.svg)
 
 
 ### Hi there i'm HARSHAVARDHAN K 👋
