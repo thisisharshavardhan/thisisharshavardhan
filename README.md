@@ -4,17 +4,17 @@
 
 ### Hi there i'm HARSHAVARDHAN K 👋
 
-## 🚀 About Me
+##  About Me
 I'm a passionate **developer** and **tinkerer** with a strong background in **development**. I have experience working on **firewalls, networking, security tools and ERP Systems, product and inventory management websites**, and I'm always eager to explore new technologies.
 
-## 🔥 Skills & Technologies
+##  Skills & Technologies
 - **Programming:** C++, Java, JavaScript, Python, Kotlin
 - **Web Development:** MERN Stack (MongoDB, Express, React, Node.js)
 - **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
 - **System Administration:** Linux, Windows, Termux, Shell Scripting
 - **Databases:** SQL, MongoDB
 
-## 🛠️ Projects
+##  Projects
 - **Centralized Application-Context Aware Firewall** 🛡️  
   - Built a **firewall agent** and **web console** to manage network access rules per application.
   - Used **MERN stack** for the backend and **Python** for the Windows/Linux agents.
@@ -23,7 +23,7 @@ I'm a passionate **developer** and **tinkerer** with a strong background in **de
 -   -Built using PHP
 
 
-## 📫 Connect with Me
+##  Connect with Me
 - **GitHub:** [github.com/yourusername](https://github.com/thisisharshavardhan)
 - **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/thisisharshavardhan)
 - **Email:** thisisharshavardhan@gmail.com
