@@ -24,7 +24,7 @@ I'm a passionate **developer** and **tinkerer** with a strong background in **de
 
 
 ##  Connect with Me
-- **GitHub:** [github.com/yourusername](https://github.com/thisisharshavardhan)
-- **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/thisisharshavardhan)
+- **GitHub:** [github.com/thisisharshavardhan](https://github.com/thisisharshavardhan)
+- **LinkedIn:** [linkedin.com/in/thisisharshavardhan](https://linkedin.com/in/thisisharshavardhan)
 - **Email:** thisisharshavardhan@gmail.com
 
