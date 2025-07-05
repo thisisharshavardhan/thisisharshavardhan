@@ -7,13 +7,6 @@
 ##  About Me
 I'm a passionate **developer** and **tinkerer** with a strong background in **development**. I have experience working on **firewalls, networking, security tools and ERP Systems, product and inventory management websites**, and I'm always eager to explore new technologies.
 
-##  Skills & Technologies
-- **Programming:** C++, Rust, Java, JavaScript, Python, Kotlin
-- **Web Development:** MERN Stack (MongoDB, Express, React, Node.js)
-- **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
-- **System Administration:** Linux, Windows, Termux, Shell Scripting
-- **Databases:** SQL, MongoDB, RedisDB
-
 ##  Projects
 - **Food Label Analyzer** 🍽️ [Backend Link](https://github.com/thisisharshavardhan/Label-scanner), [Mobile App Link](https://github.com/thisisharshavardhan/FLA-App)
   - Upload a **photo of a food label** to analyze ingredients and nutrition.
@@ -24,9 +17,13 @@ I'm a passionate **developer** and **tinkerer** with a strong background in **de
   - Built a **firewall agent** and **web console** to manage network access rules per application.
   - Used **MERN stack** for the backend and **Python** for the Windows/Linux agents.
   - Integrated **real-time monitoring and anomaly detection**.
-- **College predicter based on Ecet / Polycet Rank**
--   -Built using PHP
 
+##  Skills & Technologies
+- **Programming:** C++, Rust, Java, JavaScript, Python, Kotlin
+- **Web Development:** MERN Stack (MongoDB, Express, React, Node.js)
+- **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
+- **System Administration:** Linux, Windows, Termux, Shell Scripting
+- **Databases:** SQL, MongoDB, RedisDB
 
 ##  Connect with Me
 - **Website:** [thisisharshavardhan.me](https://thisisharshavardhan.me)
