@@ -8,7 +8,7 @@
 I'm a passionate **developer** and **tinkerer** with a strong background in **development**. I have experience working on **firewalls, networking, security tools and ERP Systems, product and inventory management websites**, and I'm always eager to explore new technologies.
 
 ##  Projects
-- **Food Label Analyzer** 🍽️ [Backend Link](https://github.com/thisisharshavardhan/Label-scanner), [Mobile App Link](https://github.com/thisisharshavardhan/FLA-App)
+- **Food Label Analyzer** 🍽️ [Backend](https://github.com/thisisharshavardhan/Label-scanner), [Mobile App](https://github.com/thisisharshavardhan/FLA-App)
   - Upload a **photo of a food label** to analyze ingredients and nutrition.
   - Uses **OCR + custom logic** to detect **harmful additives** and generate a **health score**.
   - Built with **Kotlin(native android mobile app), Node.js, MongoDB(Backend,DB), azure(VPS, compute vision API(OCR(optical charecter recognision)))**.
