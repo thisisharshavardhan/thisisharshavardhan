@@ -8,11 +8,11 @@
 I'm a passionate **developer** and **tinkerer** with a strong background in **development**. I have experience working on **firewalls, networking, security tools and ERP Systems, product and inventory management websites**, and I'm always eager to explore new technologies.
 
 ##  Skills & Technologies
-- **Programming:** C++, Java, JavaScript, Python, Kotlin
+- **Programming:** C++, Rust, Java, JavaScript, Python, Kotlin
 - **Web Development:** MERN Stack (MongoDB, Express, React, Node.js)
 - **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
 - **System Administration:** Linux, Windows, Termux, Shell Scripting
-- **Databases:** SQL, MongoDB
+- **Databases:** SQL, MongoDB, RedisDB
 
 ##  Projects
 - **Centralized Application-Context Aware Firewall** 🛡️  
