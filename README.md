@@ -19,8 +19,8 @@ I'm a passionate **developer** and **tinkerer** with a strong background in **de
   - Integrated **real-time monitoring and anomaly detection**.
 
 ##  Skills & Technologies
-- **Programming:** C++, Rust, Java, JavaScript, Python, Kotlin
-- **Web Development:** MERN Stack (MongoDB, Express, React, Node.js)
+- **Programming:** Rust, JavaScript, Java, C++, Python, Kotlin
+- **Web/Android Development:** MERN Stack (MongoDB, Express, React, Node.js), Jetpack-Compose, Android SDK
 - **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
 - **System Administration:** Linux, Windows, Termux, Shell Scripting
 - **Databases:** SQL, MongoDB, RedisDB
