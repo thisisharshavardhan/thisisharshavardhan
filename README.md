@@ -15,6 +15,11 @@ I'm a passionate **developer** and **tinkerer** with a strong background in **de
 - **Databases:** SQL, MongoDB, RedisDB
 
 ##  Projects
+- **Food Label Analyzer** 🍽️
+- Upload a **photo of a food label** to analyze ingredients and nutrition.
+- Uses **OCR + custom logic** to detect **harmful additives** and generate a **health score**.
+- Built with **Kotlin(native android mobile app), Node.js,MongoDB(Backend,DB), azure(VPS, compute vision API(OCR(optical charecter recognision)))**.
+
 - **Centralized Application-Context Aware Firewall** 🛡️  
   - Built a **firewall agent** and **web console** to manage network access rules per application.
   - Used **MERN stack** for the backend and **Python** for the Windows/Linux agents.
