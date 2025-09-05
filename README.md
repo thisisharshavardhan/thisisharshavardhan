@@ -22,41 +22,28 @@ uid=1337(hvk) gid=1337(elite) groups=1337(elite),27(sudo),116(docker)
 ◉ Specialization: Full-Stack Development | Penetration Testing
 ```
 
-##  PAYLOAD ARSENAL
-```bash
-┌─[hvk@cybersec-terminal]─[~/arsenal]
-└──╼ $ls -la /usr/bin/skills/
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 javascript.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 python.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 java.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 kotlin.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 mern_stack.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 ethical_hacking.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 penetration_testing.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 docker.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 aws.exe
-```
 
-##  EXPLOITS DEPLOYED
+
+##  PROJECT PORTFOLIO
 ```bash
-┌─[hvk@cybersec-terminal]─[~/projects]
-└──╼ $cat mission_logs.txt
-[2025-09-05 17:30:15] OPERATION: FIREWALL-BREACH
-  ├─ TARGET: Centralized Application-Context Aware Firewall
-  ├─ PAYLOAD: MERN Stack + Python + Azure + Docker
-  ├─ STATUS: DEPLOYED ✓
+hvk@cybersec-terminal:~/projects$ cat portfolio.txt
+[PROJECT PORTFOLIO]
+[2025-09-05 17:30:15] PROJECT: FIREWALL SYSTEM
+  ├─ DESCRIPTION: Application-Context Aware Firewall
+  ├─ TECH: MERN Stack + Python + Azure + Docker
+  ├─ STATUS: LEARNING & BUILDING
   └─ REPO: https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall
 
-[2025-09-05 17:30:16] OPERATION: FOOD-SCANNER  
-  ├─ TARGET: Food Label Analyzer
-  ├─ PAYLOAD: Kotlin + Android + Node.js + MongoDB
-  ├─ STATUS: ACTIVE ✓
-  └─ FEATURE: OCR | Ingredient Analysis | Health Scoring
+[2025-09-05 17:30:16] PROJECT: FOOD ANALYZER
+  ├─ DESCRIPTION: Food Label Analysis App
+  ├─ TECH: Kotlin + Android + Node.js + MongoDB
+  ├─ STATUS: EXPERIMENTING
+  └─ FEATURES: OCR | Ingredient Analysis | Health Scoring
 
-[2025-09-05 17:30:17] OPERATION: COLLEGE-PREDICTOR
-  ├─ TARGET: ECET/POLYCET Rank Prediction System
-  ├─ PAYLOAD: PHP + ML Algorithms
-  └─ STATUS: OPERATIONAL ✓
+[2025-09-05 17:30:17] PROJECT: COLLEGE PREDICTOR
+  ├─ DESCRIPTION: ECET/POLYCET Rank Prediction
+  ├─ TECH: PHP + ML Algorithms
+  └─ STATUS: STUDYING & IMPLEMENTING
 ```
 
 ## 📡 ESTABLISH CONNECTION
@@ -78,17 +65,33 @@ uid=1337(hvk) gid=1337(elite) groups=1337(elite),27(sudo),116(docker)
 ```bash
 ┌─[hvk@cybersec-terminal]─[~]
 └──╼ $echo "READY FOR NEXT MISSION" | figlet
- ____  _____    _    ______   __  _____ ___  ____  
-|  _ \| ____|  / \  |  _ \ \ / / |  ___/ _ \|  _ \ 
-| |_) |  _|   / _ \ | | | \ V /  | |_ | | | | |_) |
-|  _ <| |___ / ___ \| |_| || |   |  _|| |_| |  _ < 
-|_| \_\_____/_/   \_\____/ |_|   |_|   \___/|_| \_\
-                                                   
- _   _ _______  _____   _____ __  __ ___ ____ ____ ___ ___  _   _ 
-| \ | | ____\ \/ /_  _| |_   _|  \/  |_ _/ ___/ ___|_ _/ _ \| \ | |
-|  \| |  _|  \  /  | |    | | | |\/| || |\___ \___ \| | | | |  \| |
-| |\  | |___ /  \   | |    | | | |  | || | ___) |__) | | |_| | |\  |
-|_| \_|_____/_/\_\  |_|    |_| |_|  |_|___|____/____/___\___/|_| \_|
+██████╗ ███████╗ █████╗ ██████╗ ██╗   ██╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝
+██████╔╝█████╗  ███████║██║  ██║ ╚████╔╝
+██╔══██╗██╔══╝  ██╔══██║██║  ██║  ╚██╔╝
+██║  ██║███████╗██║  ██║██████╔╝   ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝    ╚═╝
+
+███████╗ ██████╗ ██████╗
+██╔════╝██╔═══██╗██╔══██╗
+█████╗  ██║   ██║██████╔╝
+██╔══╝  ██║   ██║██╔══██╗
+██║     ╚██████╔╝██║  ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝
+
+███╗   ██╗███████╗██╗  ██╗████████╗
+████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝
+██╔██╗ ██║█████╗   ╚███╔╝    ██║
+██║╚██╗██║██╔══╝   ██╔██╗    ██║
+██║ ╚████║███████╗██╔╝ ██╗   ██║
+╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝
+
+███╗   ███╗██╗███████╗███████╗██╗ ██████╗ ███╗   ██╗
+████╗ ████║██║██╔════╝██╔════╝██║██╔═══██╗████╗  ██║
+██╔████╔██║██║███████╗███████╗██║██║   ██║██╔██╗ ██║
+██║╚██╔╝██║██║╚════██║╚════██║██║██║   ██║██║╚██╗██║
+██║ ╚═╝ ██║██║███████║███████║██║╚██████╔╝██║ ╚████║
+╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 ```
 
 **[ MISSION STATUS: ACTIVE | COLLABORATION PROTOCOLS: ENABLED ]**
