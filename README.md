@@ -1,11 +1,5 @@
 # 💀 HARSHAVARDHAN K // DEVELOPER TERMINAL
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00FF00&center=true&vCenter=true&width=940&lines=💀+HARSHAVARDHAN+K+%7C%7C+DEVELOPER+TERMINAL;🔥+CYBERSECURITY+ENTHUSIAST+%7C%7C+FULL-STACK+DEVELOPER;⚡+ALWAYS+LEARNING+%7C%7C+ALWAYS+BUILDING" alt="Typing SVG" />
-</p>
-
----
-
 <div align="center">
 
 ```bash
