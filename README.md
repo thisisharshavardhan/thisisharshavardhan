@@ -1,4 +1,4 @@
-# 💀 HARSHAVARDHAN K // SYSTEM ACCESS GRANTED
+# 💀 HARSHAVARDHAN K // DEVELOPER TERMINAL
 
 ```bash
 ┌─[hvk@cybersec-terminal]─[~]
