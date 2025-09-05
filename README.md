@@ -1,74 +1,74 @@
 # 💀 HARSHAVARDHAN K // SYSTEM ACCESS GRANTED
 
-```diff
+```bash
 ┌─[hvk@cybersec-terminal]─[~]
 └──╼ $./hack_the_matrix.sh
 [████████████████████████████████████████] 100%
-+ Access Level: ROOT | Status: ONLINE
-! Clearance: DEVELOPER | Classification: CYBER-WARRIOR
+Access Level: \033[1;32mROOT\033[0m | Status: \033[1;32mONLINE\033[0m
+Clearance: \033[1;33mDEVELOPER\033[0m | Classification: \033[1;31mCYBER-WARRIOR\033[0m
 ```
 
 ---
 
 ##  RECONNAISSANCE
-```diff
+```bash
 ┌─[hvk@cybersec-terminal]─[~/profile]
 └──╼ $whoami && cat /etc/passwd | grep hvk
 uid=1337(hvk) gid=1337(elite) groups=1337(elite),27(sudo),116(docker)
-+ ◉ Name: Harsha Vardhan Kondru
-+ ◉ Role: Creative Developer & Cybersecurity Enthusiast  
+◉ Name: \033[1;32mHarsha Vardhan Kondru\033[0m
+◉ Role: \033[1;33mCreative Developer & Cybersecurity Enthusiast\033[0m  
 ◉ Location: Andhra Pradesh, India
 ◉ Education: B.Tech Computer Science & Engineering
-+ ◉ Specialization: Full-Stack Development | Penetration Testing
+◉ Specialization: \033[1;31mFull-Stack Development | Penetration Testing\033[0m
 ```
 
 ##  PAYLOAD ARSENAL
-```diff
+```bash
 ┌─[hvk@cybersec-terminal]─[~/arsenal]
 └──╼ $ls -la /usr/bin/skills/
-+ -rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 javascript.exe
-+ -rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 python.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 java.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 kotlin.exe
-+ -rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 mern_stack.exe
-! -rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 ethical_hacking.exe
-! -rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 penetration_testing.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 docker.exe
--rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 aws.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[32mjavascript.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[32mpython.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[36mjava.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[36mkotlin.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[33mmern_stack.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[31methical_hacking.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[31mpenetration_testing.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[35mdocker.exe\033[0m
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 \033[35maws.exe\033[0m
 ```
 
 ##  EXPLOITS DEPLOYED
-```diff
+```bash
 ┌─[hvk@cybersec-terminal]─[~/projects]
 └──╼ $cat mission_logs.txt
-! [2025-09-05 17:30:15] OPERATION: FIREWALL-BREACH
-+ ├─ TARGET: Centralized Application-Context Aware Firewall
+[\033[1;33m2025-09-05 17:30:15\033[0m] OPERATION: \033[1;31mFIREWALL-BREACH\033[0m
+  ├─ TARGET: \033[1;36mCentralized Application-Context Aware Firewall\033[0m
   ├─ PAYLOAD: MERN Stack + Python + Azure + Docker
-+ ├─ STATUS: DEPLOYED ✓
+  ├─ STATUS: \033[1;32mDEPLOYED ✓\033[0m
   └─ REPO: https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall
 
-! [2025-09-05 17:30:16] OPERATION: FOOD-SCANNER  
-+ ├─ TARGET: Food Label Analyzer
+[\033[1;33m2025-09-05 17:30:16\033[0m] OPERATION: \033[1;31mFOOD-SCANNER\033[0m  
+  ├─ TARGET: \033[1;36mFood Label Analyzer\033[0m
   ├─ PAYLOAD: Kotlin + Android + Node.js + MongoDB
-+ ├─ STATUS: ACTIVE ✓
+  ├─ STATUS: \033[1;32mACTIVE ✓\033[0m
   └─ FEATURE: OCR | Ingredient Analysis | Health Scoring
 
-! [2025-09-05 17:30:17] OPERATION: COLLEGE-PREDICTOR
-+ ├─ TARGET: ECET/POLYCET Rank Prediction System
+[\033[1;33m2025-09-05 17:30:17\033[0m] OPERATION: \033[1;31mCOLLEGE-PREDICTOR\033[0m
+  ├─ TARGET: \033[1;36mECET/POLYCET Rank Prediction System\033[0m
   ├─ PAYLOAD: PHP + ML Algorithms
-+ └─ STATUS: OPERATIONAL ✓
+  └─ STATUS: \033[1;32mOPERATIONAL ✓\033[0m
 ```
 
 ## 📡 ESTABLISH CONNECTION
-```diff
+```bash
 ┌─[hvk@cybersec-terminal]─[~/contact]
 └──╼ $cat channels.conf
 [SECURE_CHANNELS]
-+ > Website......: https://thisisharshavardhan.me
-+ > LinkedIn.....: linkedin.com/in/thisisharshavardhan  
-+ > GitHub.......: github.com/thisisharshavardhan
-+ > Email........: thisisharshavardhan@gmail.com
-! > Encryption...: PGP/GPG Ready
+> Website......: \033[1;36mhttps://thisisharshavardhan.me\033[0m
+> LinkedIn.....: \033[1;34mlinkedin.com/in/thisisharshavardhan\033[0m  
+> GitHub.......: \033[1;37mgithub.com/thisisharshavardhan\033[0m
+> Email........: \033[1;35mthisisharshavardhan@gmail.com\033[0m
+> Encryption...: \033[1;31mPGP/GPG Ready\033[0m
 ```
 
 ---
