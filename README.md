@@ -65,8 +65,8 @@ uid=1337(hvk) gid=1337(elite) groups=1337(elite),27(sudo),116(docker)
 └──╼ $cat channels.conf
 [SECURE_CHANNELS]
 > Website......: https://thisisharshavardhan.me
-> LinkedIn.....: linkedin.com/in/thisisharshavardhan  
-> GitHub.......: github.com/thisisharshavardhan
+> LinkedIn.....: https://linkedin.com/in/thisisharshavardhan  
+> GitHub.......: https://github.com/thisisharshavardhan
 > Email........: thisisharshavardhan@gmail.com
 > Encryption...: PGP/GPG Ready
 ```
