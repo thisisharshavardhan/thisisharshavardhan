@@ -1,33 +1,97 @@
-<p align="center">
-<br><img src="https://github.com/chiraag-kakar/chiraag-kakar/blob/master/hadder.gif" width="280px"><br><br>
-</p>
+# 💀 HARSHAVARDHAN K // SYSTEM ACCESS GRANTED
 
-### Hi there i'm HARSHAVARDHAN K 👋
+```bash
+┌─[hvk@cybersec-terminal]─[~]
+└──╼ $./hack_the_matrix.sh
+[████████████████████████████████████████] 100%
+Access Level: ROOT | Status: ONLINE
+Clearance: DEVELOPER | Classification: CYBER-WARRIOR
+```
 
-##  About Me
-I'm a passionate **developer** and **tinkerer** with a strong background in **development**. I have experience working on **firewalls, networking, security tools and ERP Systems, product and inventory management websites**, and I'm always eager to explore new technologies.
+---
 
-##  Projects
-- **Food Label Analyzer** 🍽️ [Backend](https://github.com/thisisharshavardhan/Label-scanner), [Mobile App](https://github.com/thisisharshavardhan/FLA-App)
-  - Upload a **photo of a food label** to analyze ingredients and nutrition.
-  - Uses **OCR + custom logic** to detect **harmful additives** and generate a **health score**.
-  - Built with **Kotlin(native android mobile app), Node.js, MongoDB(Backend,DB), azure(VPS, compute vision API(OCR(optical charecter recognision)))**.
+##  RECONNAISSANCE
+```bash
+┌─[hvk@cybersec-terminal]─[~/profile]
+└──╼ $whoami && cat /etc/passwd | grep hvk
+uid=1337(hvk) gid=1337(elite) groups=1337(elite),27(sudo),116(docker)
+◉ Name: Harsha Vardhan Kondru
+◉ Role: Creative Developer & Cybersecurity Enthusiast  
+◉ Location: Andhra Pradesh, India
+◉ Education: B.Tech Computer Science & Engineering
+◉ Specialization: Full-Stack Development | Penetration Testing
+```
 
-- **Centralized Application-Context Aware Firewall** 🛡️  [Link](https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall)
-  - Built a **firewall agent** and **web console** to manage network access rules per application.
-  - Used **MERN stack** for the backend and **Python** for the Windows/Linux agents.
-  - Integrated **real-time monitoring and anomaly detection**.
+##  PAYLOAD ARSENAL
+```bash
+┌─[hvk@cybersec-terminal]─[~/arsenal]
+└──╼ $ls -la /usr/bin/skills/
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 javascript.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 python.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 java.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 kotlin.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 mern_stack.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 ethical_hacking.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 penetration_testing.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 docker.exe
+-rwxr-xr-x 1 hvk elite  4096 Sep 05 2025 aws.exe
+```
 
-##  Skills & Technologies
-- **Programming:** Rust, JavaScript, Java, C++, Python, Kotlin
-- **Web/Android Development:** MERN Stack (MongoDB, Express, React, Node.js), Jetpack-Compose, Android SDK
-- **Cybersecurity:** Ethical Hacking, Penetration Testing, Network Security
-- **System Administration:** Linux, Windows, Termux, Shell Scripting
-- **Databases:** SQL, MongoDB, RedisDB
+##  EXPLOITS DEPLOYED
+```bash
+┌─[hvk@cybersec-terminal]─[~/projects]
+└──╼ $cat mission_logs.txt
+[2025-09-05 17:30:15] OPERATION: FIREWALL-BREACH
+  ├─ TARGET: Centralized Application-Context Aware Firewall
+  ├─ PAYLOAD: MERN Stack + Python + Azure + Docker
+  ├─ STATUS: DEPLOYED ✓
+  └─ REPO: https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall
 
-##  Connect with Me
-- **Website:** [thisisharshavardhan.me](https://thisisharshavardhan.me)
-- **GitHub:** [github.com/thisisharshavardhan](https://github.com/thisisharshavardhan)
-- **LinkedIn:** [linkedin.com/in/thisisharshavardhan](https://linkedin.com/in/thisisharshavardhan)
-- **Email:** thisisharshavardhan@gmail.com
+[2025-09-05 17:30:16] OPERATION: FOOD-SCANNER  
+  ├─ TARGET: Food Label Analyzer
+  ├─ PAYLOAD: Kotlin + Android + Node.js + MongoDB
+  ├─ STATUS: ACTIVE ✓
+  └─ FEATURE: OCR | Ingredient Analysis | Health Scoring
+
+[2025-09-05 17:30:17] OPERATION: COLLEGE-PREDICTOR
+  ├─ TARGET: ECET/POLYCET Rank Prediction System
+  ├─ PAYLOAD: PHP + ML Algorithms
+  └─ STATUS: OPERATIONAL ✓
+```
+
+## 📡 ESTABLISH CONNECTION
+```bash
+┌─[hvk@cybersec-terminal]─[~/contact]
+└──╼ $cat channels.conf
+[SECURE_CHANNELS]
+> Website......: https://thisisharshavardhan.me
+> LinkedIn.....: linkedin.com/in/thisisharshavardhan  
+> GitHub.......: github.com/thisisharshavardhan
+> Email........: thisisharshavardhan@gmail.com
+> Encryption...: PGP/GPG Ready
+```
+
+---
+
+<div align="center">
+
+```bash
+┌─[hvk@cybersec-terminal]─[~]
+└──╼ $echo "READY FOR NEXT MISSION" | figlet
+ ____  _____    _    ______   __  _____ ___  ____  
+|  _ \| ____|  / \  |  _ \ \ / / |  ___/ _ \|  _ \ 
+| |_) |  _|   / _ \ | | | \ V /  | |_ | | | | |_) |
+|  _ <| |___ / ___ \| |_| || |   |  _|| |_| |  _ < 
+|_| \_\_____/_/   \_\____/ |_|   |_|   \___/|_| \_\
+                                                   
+ _   _ _______  _____   __  __ ___ ____ ____ ___ ___  _   _ 
+| \ | | ____\ \/ /___|  |  \/  |_ _/ ___/ ___|_ _/ _ \| \ | |
+|  \| |  _|  \  /|___| | |\/| || |\___ \___ \| | | | |  \| |
+| |\  | |___ /  \     | |  | || | ___) |__) | | |_| | |\  |
+|_| \_|_____/_/\_\    |_|  |_|___|____/____/___\___/|_| \_|
+```
+
+**[ MISSION STATUS: ACTIVE | COLLABORATION PROTOCOLS: ENABLED ]**
+
+</div>
 
