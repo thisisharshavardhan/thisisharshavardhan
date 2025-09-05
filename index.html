@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harsha Vardhan Kondru - Creative Developer Portfolio">
+    <meta name="keywords" content="developer, programmer, cybersecurity, full-stack">
+    <title>HVK://portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terminal-bg: #0a0a0a;
+            --terminal-green: #00ff41;
+            --terminal-cyan: #00ffff;
+            --terminal-yellow: #ffff00;
+            --terminal-red: #ff0040;
+            --terminal-purple: #ff00ff;
+            --terminal-orange: #ff8c00;
+            --text-shadow: 0 0 10px var(--terminal-green);
+            --glow: 0 0 20px var(--terminal-green);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--terminal-bg);
+            color: var(--terminal-green);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Custom cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--terminal-green);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            background: var(--terminal-green);
+            border-radius: 50%;
+        }
+
+        /* Terminal window styling */
+        .terminal-window {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid var(--terminal-green);
+            border-radius: 8px;
+            margin: 20px;
+            box-shadow: var(--glow);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .terminal-header {
+            background: linear-gradient(90deg, var(--terminal-green), var(--terminal-cyan));
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .terminal-button.red { background: var(--terminal-red); }
+        .terminal-button.yellow { background: var(--terminal-yellow); }
+        .terminal-button.green { background: var(--terminal-green); }
+
+        .terminal-title {
+            color: var(--terminal-bg);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .terminal-content {
+            padding: 20px;
+            background: var(--terminal-bg);
+            min-height: 400px;
+        }
+
+        /* Typing animation */
+        .typing {
+            border-right: 2px solid var(--terminal-green);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: var(--terminal-green); }
+            51%, 100% { border-color: transparent; }
+        }
+
+        /* Command prompt */
+        .command-prompt {
+            color: var(--terminal-green);
+            margin-bottom: 10px;
+        }
+
+        .command-prompt::before {
+            content: 'hvk@portfolio:~$ ';
+            color: var(--terminal-cyan);
+        }
+
+        /* Glitch effect */
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            animation: glitch-1 0.5s infinite;
+            color: var(--terminal-red);
+            z-index: -1;
+        }
+
+        .glitch::after {
+            animation: glitch-2 0.5s infinite;
+            color: var(--terminal-cyan);
+            z-index: -2;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitch-1 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        @keyframes glitch-2 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(2px, 2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(-2px, 2px); }
+        }
+
+        /* Matrix rain effect */
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .matrix-column {
+            position: absolute;
+            color: var(--terminal-green);
+            font-size: 14px;
+            animation: matrix-fall linear infinite;
+        }
+
+        .matrix-column:nth-child(odd) {
+            animation-duration: 3s;
+        }
+
+        .matrix-column:nth-child(even) {
+            animation-duration: 4s;
+        }
+
+        @keyframes matrix-fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Navigation */
+        .nav-terminal {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-commands {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .nav-command {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-command:hover {
+            background: var(--terminal-green);
+            color: var(--terminal-bg);
+            box-shadow: var(--glow);
+        }
+
+        /* Content sections */
+        .section {
+            margin: 40px 0;
+        }
+
+        .section-title {
+            color: var(--terminal-cyan);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-shadow: var(--text-shadow);
+        }
+
+        .command-output {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--terminal-yellow);
+            font-weight: 600;
+        }
+
+        .link {
+            color: var(--terminal-purple);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .link:hover {
+            color: var(--terminal-orange);
+        }
+
+        /* Skills as code */
+        .skill-code {
+            background: rgba(0, 20, 0, 0.3);
+            border-left: 3px solid var(--terminal-green);
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .skill-language {
+            color: var(--terminal-cyan);
+        }
+
+        .skill-level {
+            color: var(--terminal-yellow);
+        }
+
+        /* Project cards as terminal windows */
+        .project-terminal {
+            margin: 20px 0;
+            border: 1px solid var(--terminal-cyan);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .project-header {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--terminal-cyan);
+        }
+
+        .project-title {
+            color: var(--terminal-cyan);
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .project-description {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 0, 0.1);
+            color: var(--terminal-yellow);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        /* Contact form as terminal */
+        .contact-terminal {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--terminal-purple);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-input {
+            background: transparent;
+            border: 1px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-family: 'JetBrains Mono', monospace;
+            outline: none;
+        }
+
+        .contact-input:focus {
+            border-color: var(--terminal-cyan);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .contact-button {
+            background: var(--terminal-green);
+            color: var(--terminal-bg);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: var(--terminal-cyan);
+            box-shadow: var(--glow);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .terminal-window {
+                margin: 10px;
+            }
+
+            .nav-terminal {
+                position: static;
+                margin: 20px;
+            }
+
+            .nav-commands {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--terminal-green);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <div class="matrix-rain" id="matrixRain"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Navigation -->
+    <div class="nav-terminal">
+        <div class="nav-commands">
+            <a href="#home" class="nav-command">cd /home</a>
+            <a href="#about" class="nav-command">cat about.txt</a>
+            <a href="#skills" class="nav-command">ls skills/</a>
+            <a href="#projects" class="nav-command">ls projects/</a>
+            <a href="#contact" class="nav-command">mail hvk</a>
+        </div>
+    </div>
+
+    <!-- Main Terminal Window -->
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+            </div>
+            <div class="terminal-title">hvk@portfolio: ~</div>
+        </div>
+
+        <div class="terminal-content">
+            <!-- Home Section -->
+            <section id="home">
+                <div class="command-prompt">whoami</div>
+                <div class="command-output">
+                    <span class="glitch" data-text="Harsha Vardhan Kondru">Harsha Vardhan Kondru</span><br>
+                    <span class="highlight">Creative Developer & Cybersecurity Enthusiast</span><br>
+                    <span style="color: var(--terminal-purple);">B.Tech Computer Science & Engineering</span><br>
+                    <span style="color: var(--terminal-orange);">Location: Andhra Pradesh, India</span>
+                </div>
+
+                <div class="command-prompt">echo "Welcome to my digital terminal"</div>
+                <div class="command-output">
+                    Welcome to my digital terminal<br>
+                    Type 'help' for available commands<br>
+                    Use navigation buttons to explore
+                </div>
+
+                <div class="command-prompt">ls -la</div>
+                <div class="command-output">
+                    drwxr-xr-x  2 hvk hvk 4096 Sep  5 16:15 <span class="highlight">.</span><br>
+                    drwxr-xr-x 15 hvk hvk 4096 Sep  5 16:15 <span class="highlight">..</span><br>
+                    -rw-r--r--  1 hvk hvk 2048 Sep  5 16:15 <a href="#about" class="link">about.txt</a><br>
+                    drwxr-xr-x  2 hvk hvk 4096 Sep  5 16:15 <a href="#skills" class="link">skills/</a><br>
+                    drwxr-xr-x  2 hvk hvk 4096 Sep  5 16:15 <a href="#projects" class="link">projects/</a><br>
+                    -rw-r--r--  1 hvk hvk 1024 Sep  5 16:15 <a href="#contact" class="link">contact.sh</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="command-prompt">cat about.txt</div>
+                <div class="command-output">
+                    <div class="section-title">=== ABOUT ME ===</div>
+                    I'm a passionate developer with a unique blend of creativity and technical expertise.<br><br>
+
+                    My journey in tech started with a curiosity about how things work, leading me to explore:<br>
+                    • <span class="highlight">Full-Stack Development</span> (MERN Stack)<br>
+                    • <span class="highlight">Cybersecurity</span> & Ethical Hacking<br>
+                    • <span class="highlight">Network Engineering</span> & System Administration<br>
+                    • <span class="highlight">Mobile Development</span> (Android/Kotlin)<br><br>
+
+                    Currently pursuing my B.Tech in Computer Science & Engineering,<br>
+                    I love building innovative solutions and exploring cutting-edge technologies.<br><br>
+
+                    <span style="color: var(--terminal-cyan);">When I'm not coding, you'll find me:</span><br>
+                    • Exploring new frameworks and tools<br>
+                    • Contributing to open-source projects<br>
+                    • Learning about cybersecurity<br>
+                    • Building side projects for fun
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="command-prompt">ls skills/</div>
+                <div class="command-output">
+                    <div class="section-title">=== SKILLS DIRECTORY ===</div>
+
+                    <div class="skill-code">
+                        <span class="skill-language">Programming Languages:</span><br>
+                        JavaScript <span class="skill-level">[████████░░] 80%</span><br>
+                        Python <span class="skill-level">[███████░░░] 70%</span><br>
+                        Java <span class="skill-level">[██████░░░░] 60%</span><br>
+                        C++ <span class="skill-level">[█████░░░░░] 50%</span><br>
+                        Kotlin <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+
+                    <div class="skill-code">
+                        <span class="skill-language">Web Technologies:</span><br>
+                        MERN Stack <span class="skill-level">[████████░░] 80%</span><br>
+                        React.js <span class="skill-level">[████████░░] 80%</span><br>
+                        Node.js <span class="skill-level">[███████░░░] 70%</span><br>
+                        Express.js <span class="skill-level">[███████░░░] 70%</span><br>
+                        MongoDB <span class="skill-level">[██████░░░░] 60%</span>
+                    </div>
+
+                    <div class="skill-code">
+                        <span class="skill-language">Cybersecurity:</span><br>
+                        Ethical Hacking <span class="skill-level">[███████░░░] 70%</span><br>
+                        Network Security <span class="skill-level">[██████░░░░] 60%</span><br>
+                        Penetration Testing <span class="skill-level">[█████░░░░░] 50%</span><br>
+                        Firewall Management <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+
+                    <div class="skill-code">
+                        <span class="skill-language">Tools & Platforms:</span><br>
+                        Git <span class="skill-level">[████████░░] 80%</span><br>
+                        Docker <span class="skill-level">[██████░░░░] 60%</span><br>
+                        AWS <span class="skill-level">[█████░░░░░] 50%</span><br>
+                        Azure <span class="skill-level">[██████░░░░] 60%</span><br>
+                        Linux <span class="skill-level">[███████░░░] 70%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="command-prompt">ls projects/</div>
+                <div class="command-output">
+                    <div class="section-title">=== PROJECTS DIRECTORY ===</div>
+
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <div class="project-title">🔥 Centralized Firewall Manager</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Built a comprehensive firewall management system with real-time monitoring and application-specific rules.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">MERN Stack</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="command-prompt" style="margin-top: 10px;">
+                                <a href="https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall" class="link">git clone https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <div class="project-title">📱 Food Label Analyzer</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Android app that scans food labels using OCR to identify potentially harmful ingredients.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">OCR</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <div class="command-prompt" style="margin-top: 10px;">
+                                <a href="https://github.com/thisisharshavardhan/Label-scanner" class="link">git clone https://github.com/thisisharshavardhan/Label-scanner</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <div class="project-title">🎓 College Predictor</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-description">
+                                Web application that predicts college admissions based on ECET/Polycet exam ranks.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Web Development</span>
+                                <span class="tech-tag">Data Analysis</span>
+                            </div>
+                            <div class="command-prompt" style="margin-top: 10px;">
+                                <span class="link">./college-predictor.sh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="command-prompt">./contact.sh</div>
+                <div class="command-output">
+                    <div class="section-title">=== CONTACT TERMINAL ===</div>
+
+                    <div class="contact-terminal">
+                        <div style="margin-bottom: 15px;">
+                            <span style="color: var(--terminal-cyan);">Send me a message:</span>
+                        </div>
+
+                        <form id="contactForm">
+                            <input type="text" class="contact-input" placeholder="Your Name" required><br>
+                            <input type="email" class="contact-input" placeholder="your.email@example.com" required><br>
+                            <input type="text" class="contact-input" placeholder="Subject" required><br>
+                            <textarea class="contact-input" placeholder="Your message..." rows="4" required></textarea><br>
+                            <button type="submit" class="contact-button">sendmail hvk@portfolio</button>
+                        </form>
+
+                        <div style="margin-top: 20px;">
+                            <div class="command-prompt">echo "Alternative contact methods:"</div>
+                            <div style="margin-left: 20px;">
+                                📧 <a href="mailto:thisisharshavardhan@gmail.com" class="link">thisisharshavardhan@gmail.com</a><br>
+                                💼 <a href="https://linkedin.com/in/thisisharshavardhan" class="link">linkedin.com/in/thisisharshavardhan</a><br>
+                                🐙 <a href="https://github.com/thisisharshavardhan" class="link">github.com/thisisharshavardhan</a><br>
+                                📍 Andhra Pradesh, India
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--terminal-green);">
+                <div class="command-prompt">echo "Thanks for visiting my terminal!"</div>
+                <div style="color: var(--terminal-cyan); margin: 10px 0;">
+                    © 2025 Harsha Vardhan Kondru | Built with ❤️ and lots of ☕
+                </div>
+                <div class="command-prompt">exit</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+
+            for (let i = 0; i < 20; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDelay = Math.random() * 2 + 's';
+                column.textContent = characters[Math.floor(Math.random() * characters.length)];
+                matrixRain.appendChild(column);
+            }
+        }
+
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Typing Animation
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.textContent = '';
+            element.classList.add('typing');
+
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    element.classList.remove('typing');
+                }
+            }
+            type();
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('.contact-button');
+            const originalText = button.textContent;
+            button.innerHTML = '<div class="loading"></div> Sending...';
+            button.disabled = true;
+
+            // Simulate sending (replace with actual form submission)
+            setTimeout(() => {
+                button.textContent = 'Message sent successfully!';
+                button.style.background = 'var(--terminal-cyan)';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    button.style.background = 'var(--terminal-green)';
+                    this.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Initialize effects
+        document.addEventListener('DOMContentLoaded', () => {
+            createMatrixRain();
+
+            // Add typing effect to welcome message
+            const welcomeText = document.querySelector('#home .command-output');
+            if (welcomeText) {
+                setTimeout(() => {
+                    typeWriter(welcomeText, welcomeText.textContent, 30);
+                }, 500);
+            }
+        });
+
+        // Add some interactive terminal effects
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                // Add a subtle flash effect
+                document.body.style.background = 'var(--terminal-green)';
+                setTimeout(() => {
+                    document.body.style.background = 'var(--terminal-bg)';
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html>
