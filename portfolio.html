@@ -396,19 +396,60 @@
             }
         }
 
-        /* Loading animation */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--terminal-green);
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s ease-in-out infinite;
+        /* ASCII Art Logo */
+        .ascii-logo {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.7rem;
+            line-height: 1.2;
+            color: var(--terminal-cyan);
+            text-shadow: var(--text-shadow);
+            animation: logo-glow 2s ease-in-out infinite alternate;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        /* Interactive Command Input */
+        .command-input-container {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .command-input {
+            background: transparent;
+            border: 1px solid var(--terminal-green);
+            color: var(--terminal-green);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            caret-color: var(--terminal-green);
+        }
+
+        .command-input:focus {
+            border-color: var(--terminal-cyan);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .command-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--terminal-green);
+            max-height: 150px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .suggestion-item {
+            padding: 8px 10px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+        }
+
+        .suggestion-item:hover {
+            background: rgba(0, 255, 65, 0.1);
         }
     </style>
 </head>
@@ -442,6 +483,20 @@
         </div>
 
         <div class="terminal-content">
+            <!-- ASCII Art Logo -->
+            <div class="ascii-logo" id="asciiLogo">
+ ██░ ██  ██▓ ██▓     ██▓    ▄▄▄█████▓ ██▓ ▒█████   █    ██  ▄▄▄       ██▓    ▄▄▄█████▓ ██▓<br>
+▓██░ ██▒▓██▒▓██▒    ▓██▒    ▓  ██▒ ▓▒▓██▒▒██▒  ██▒ ██  ▓██▒▒████▄    ▓██▒    ▓  ██▒ ▓▒▓██▒<br>
+▒██▀▀██░▒██▒▒██░    ▒██░    ▒ ▓██░ ▒░▒██▒▒██░  ██▒▓██  ▒██░▒██  ▀█▄  ▒██░    ▒ ▓██░ ▒░▒██▒<br>
+░▓█ ░██ ░██░░██░    ▒██░    ░ ▓██▓ ░ ░██░▒██   ██░▓▓█  ░██░░██▄▄▄▄██ ▒██░    ░ ▓██▓ ░ ░██░░<br>
+░▓█▒░██▓░██░▓██▒ ██▓ ░██████▒  ▒██▒ ░ ░██░░ ████▓▒░▒▒█████▓  ▓█   ▓██▒░██████▒  ▒██▒ ░ ░██░░<br>
+ ▒ ░░▒░▒░▓  ▒ ░░ ░  ░ ▒░▓  ░  ▒ ░░   ░▓  ░ ▒░▒░▒░ ▒▓▒ ▒ ░  ▒▒   ▓▒█░░ ▒░▓  ░  ▒ ░░   ░▓  <br>
+ ▒ ░▒░ ░ ▒ ░▒ ░ ░ ░  ░ ░ ▒ ░    ▒ ░   ▒ ░  ░ ▒ ▒░ ░▒░ ░ ░   ▒   ▒▒ ░░ ░ ▒ ░    ░      ▒ ░<br>
+ ░  ░░ ░ ░ ░░ ░ ░ ░    ░ ░    ░     ▒ ░░ ░ ░ ▒░ ░░░ ░ ░   ░   ▒   ▒     ░ ░   ░        ▒ ░<br>
+ ░  ░  ░ ░  ░  ░  ░ ░     ░ ░  ░       ░      ░ ░     ░           ░  ░    ░  ░            ░  <br>
+                                                                                                 
+            </div>
+
             <!-- Home Section -->
             <section id="home">
                 <div class="command-prompt">whoami</div>
@@ -469,6 +524,12 @@
                     -rw-r--r--  1 hvk hvk 1024 Sep  5 16:15 <a href="#contact" class="link">contact.sh</a>
                 </div>
             </section>
+
+            <!-- Interactive Command System -->
+            <div class="command-input-container">
+                <div class="command-prompt" style="margin-bottom: 5px;">hvk@portfolio:~$ <input type="text" class="command-input" id="commandInput" placeholder="Type 'help' for commands..." autocomplete="off"></div>
+                <div class="command-suggestions" id="commandSuggestions"></div>
+            </div>
 
             <!-- About Section -->
             <section id="about" class="section">
@@ -727,6 +788,7 @@
         // Initialize effects
         document.addEventListener('DOMContentLoaded', () => {
             createMatrixRain();
+            animateASCII();
 
             // Add typing effect to welcome message
             const welcomeText = document.querySelector('#home .command-output');
@@ -736,6 +798,117 @@
                 }, 500);
             }
         });
+
+        // Interactive Command System
+        const commandInput = document.getElementById('commandInput');
+        const commandSuggestions = document.getElementById('commandSuggestions');
+        const availableCommands = [
+            'help', 'about', 'skills', 'experience', 'projects', 'stats', 'contact',
+            'whoami', 'ls', 'cat', 'clear', 'neofetch', 'history', 'pwd', 'echo'
+        ];
+
+        commandInput.addEventListener('input', (e) => {
+            const value = e.target.value.toLowerCase();
+            const matches = availableCommands.filter(cmd => cmd.startsWith(value));
+
+            if (matches.length > 0 && value.length > 0) {
+                commandSuggestions.innerHTML = matches.map(match =>
+                    `<div class="suggestion-item" onclick="selectCommand('${match}')">${match}</div>`
+                ).join('');
+                commandSuggestions.style.display = 'block';
+            } else {
+                commandSuggestions.style.display = 'none';
+            }
+        });
+
+        commandInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                executeCommand(commandInput.value);
+                commandInput.value = '';
+                commandSuggestions.style.display = 'none';
+            } else if (e.key === 'Tab') {
+                e.preventDefault();
+                const firstSuggestion = commandSuggestions.querySelector('.suggestion-item');
+                if (firstSuggestion) {
+                    commandInput.value = firstSuggestion.textContent;
+                    commandSuggestions.style.display = 'none';
+                }
+            }
+        });
+
+        function selectCommand(command) {
+            commandInput.value = command;
+            commandSuggestions.style.display = 'none';
+            executeCommand(command);
+        }
+
+        function executeCommand(command) {
+            const output = document.createElement('div');
+            output.className = 'command-output';
+            output.innerHTML = `<div class="command-prompt">hvk@portfolio:~$ ${command}</div>`;
+
+            switch (command.toLowerCase()) {
+                case 'help':
+                    output.innerHTML += `
+                        Available commands:<br>
+                        • help - Show this help message<br>
+                        • about - Display about information<br>
+                        • skills - List technical skills<br>
+                        • experience - Show experience timeline<br>
+                        • projects - Display project portfolio<br>
+                        • stats - Show system statistics<br>
+                        • contact - Display contact information<br>
+                        • whoami - Display current user<br>
+                        • ls - List directory contents<br>
+                        • clear - Clear terminal screen<br>
+                        • neofetch - Display system information<br>
+                        • history - Show command history<br>
+                        • pwd - Print working directory<br>
+                        • echo [text] - Display text
+                    `;
+                    break;
+                case 'whoami':
+                    output.innerHTML += 'hvk<br>Creative Developer & Cybersecurity Enthusiast';
+                    break;
+                case 'ls':
+                    output.innerHTML += 'about.txt  skills/  experience/  projects/  stats  contact.sh';
+                    break;
+                case 'pwd':
+                    output.innerHTML += '/home/hvk/portfolio';
+                    break;
+                case 'clear':
+                    document.querySelector('.terminal-content').innerHTML = '';
+                    return;
+                case 'neofetch':
+                    window.location.hash = '#stats';
+                    output.innerHTML += 'Redirecting to system stats...';
+                    break;
+                default:
+                    if (command.startsWith('echo ')) {
+                        output.innerHTML += command.substring(5);
+                    } else {
+                        output.innerHTML += `Command not found: ${command}. Type 'help' for available commands.`;
+                    }
+            }
+
+            // Insert output before the command input
+            const inputContainer = document.querySelector('.command-input-container');
+            inputContainer.parentNode.insertBefore(output, inputContainer);
+            output.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ASCII Art Animation
+        function animateASCII() {
+            const ascii = document.getElementById('asciiLogo');
+            const lines = ascii.textContent.split('\n');
+            ascii.textContent = '';
+
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    ascii.innerHTML += line + '\n';
+                }, index * 50);
+            });
+        }
 
         // Add some interactive terminal effects
         document.addEventListener('keydown', (e) => {
