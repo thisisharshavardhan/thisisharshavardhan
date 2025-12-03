@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harsha Vardhan Kondru - Software Developer Portfolio">
+    <title>hvk@terminal:~$</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #151934;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-green: #00ff88;
+            --accent-cyan: #00d9ff;
+            --accent-yellow: #ffeb3b;
+            --accent-purple: #bb86fc;
+            --border-color: #2a3142;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .terminal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .terminal-header {
+            background: var(--bg-primary);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .btn-red { background: #ff5f56; }
+        .btn-yellow { background: #ffbd2e; }
+        .btn-green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .terminal-body {
+            padding: 20px;
+        }
+
+        .prompt {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .prompt::before {
+            content: "hvk@terminal:~$ ";
+        }
+
+        .output {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        h1, h2 {
+            color: var(--accent-cyan);
+            margin: 20px 0 10px 0;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 30px;
+        }
+
+        h2::before {
+            content: "# ";
+            color: var(--accent-purple);
+        }
+
+        .highlight {
+            color: var(--accent-yellow);
+            font-weight: 600;
+        }
+
+        .link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-cyan);
+            transition: all 0.2s;
+        }
+
+        .link:hover {
+            color: var(--accent-green);
+            border-bottom: 1px solid var(--accent-green);
+        }
+
+        .skill-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .skill-name {
+            width: 180px;
+            color: var(--text-secondary);
+        }
+
+        .bar {
+            flex: 1;
+            height: 8px;
+            background: var(--bg-primary);
+            border-radius: 4px;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .project-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .project-title {
+            color: var(--accent-cyan);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: var(--bg-secondary);
+            color: var(--accent-yellow);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin: 5px 5px 0 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        .contact-label {
+            color: var(--accent-purple);
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .nav-menu {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-primary);
+            color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        .experience-item, .education-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--bg-primary);
+            border-left: 3px solid var(--accent-green);
+            border-radius: 4px;
+        }
+
+        .experience-title, .education-title {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .experience-company, .education-institution {
+            color: var(--accent-purple);
+            font-size: 0.9rem;
+        }
+
+        .experience-date, .education-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li::before {
+            content: "→ ";
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        li {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .terminal-body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .skill-name {
+                width: 120px;
+                font-size: 0.85rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+            }
+
+            .nav-link {
+                text-align: center;
+            }
+        }
+
+        .typing::after {
+            content: "▋";
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Main Terminal -->
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-button btn-red"></div>
+            <div class="terminal-button btn-yellow"></div>
+            <div class="terminal-button btn-green"></div>
+            <div class="terminal-title">hvk@terminal: ~</div>
+        </div>
+        <div class="terminal-body">
+            <!-- Home Section -->
+            <section id="home">
+                <div class="prompt">whoami</div>
+                <div class="output">
+                    <h1>Harsha Vardhan Kondru</h1>
+                    <p><span class="highlight">Software Developer | Coder | Creator | Innovator</span></p>
+                    <p style="margin-top: 10px;">I build efficient applications with a focus on <span class="highlight">security</span>, <span class="highlight">performance</span>, and <span class="highlight">user experience</span>.</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="prompt">cat about.txt</div>
+                <div class="output">
+                    <h2>About Me</h2>
+                    <p>I am a Computer Science and Engineering student from <span class="highlight">Andhra Pradesh, India</span>, with a strong background in software development and product engineering.</p>
+                    <p style="margin-top: 15px;">Currently pursuing my <span class="highlight">B.Tech in Computer Science & Engineering</span> at Vishnu Institute of Technology. I specialize in full-stack development, building responsive and dynamic user interfaces, and optimizing application performance.</p>
+                    
+                    <h3 style="color: var(--accent-purple); margin-top: 20px;">Specializations:</h3>
+                    <ul>
+                        <li>Software Development</li>
+                        <li>Product Engineering</li>
+                        <li>Web Development</li>
+                        <li>Mobile Development</li>
+                        <li>Cloud Services</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <div class="prompt">ls experience/</div>
+                <div class="output">
+                    <h2>Professional Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-title">Software Development Intern</div>
+                        <div class="experience-company">SBL Solutions, Gudlavalleru, Andhra Pradesh, India</div>
+                        <div class="experience-date">November 2023 - May 2024</div>
+                        <ul style="margin-top: 10px;">
+                            <li>Designed and developed web applications for Product Management, Supply Chain, and ERP Systems</li>
+                            <li>Worked with cloud platforms and modern JavaScript frameworks</li>
+                            <li>Focused on creating responsive and dynamic user interfaces</li>
+                            <li>Optimized application performance and user experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <div class="prompt">cat education.log</div>
+                <div class="output">
+                    <h2>Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="education-title">B.Tech in Computer Science and Engineering</div>
+                        <div class="education-institution">Vishnu Institute of Technology, Bhimavaram, Andhra Pradesh</div>
+                        <div class="education-date">2024 - 2027</div>
+                        <p style="margin-top: 8px; color: var(--text-secondary);">Pursuing bachelor's degree with a focus on computer science fundamentals and software development.</p>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-title">Diploma in Computer Engineering</div>
+                        <div class="education-institution">A.A.N.M & V.V.R.S.R POLYTECHNIC GUDLAVALLERU, Andhra Pradesh</div>
+                        <div class="education-date">2021 - 2024</div>
+                        <p style="margin-top: 8px; color: var(--text-secondary);">Completed diploma with focus on computer engineering fundamentals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="prompt">cat skills.json</div>
+                <div class="output">
+                    <h2>Skills & Technologies</h2>
+                    
+                    <h3 style="color: var(--accent-purple); margin-top: 25px;">Programming Languages</h3>
+                    <div class="skill-bar">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
+                        <span style="color: var(--accent-green);">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Python</div>
+                        <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+                        <span style="color: var(--accent-green);">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Java</div>
+                        <div class="bar"><div class="bar-fill" style="width: 75%"></div></div>
+                        <span style="color: var(--accent-green);">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Kotlin</div>
+                        <div class="bar"><div class="bar-fill" style="width: 70%"></div></div>
+                        <span style="color: var(--accent-green);">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">C/C++</div>
+                        <div class="bar"><div class="bar-fill" style="width: 65%"></div></div>
+                        <span style="color: var(--accent-green);">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Go</div>
+                        <div class="bar"><div class="bar-fill" style="width: 60%"></div></div>
+                        <span style="color: var(--accent-green);">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">PHP</div>
+                        <div class="bar"><div class="bar-fill" style="width: 65%"></div></div>
+                        <span style="color: var(--accent-green);">65%</span>
+                    </div>
+
+                    <h3 style="color: var(--accent-purple); margin-top: 25px;">Web Technologies</h3>
+                    <div class="skill-bar">
+                        <div class="skill-name">MERN Stack</div>
+                        <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
+                        <span style="color: var(--accent-green);">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">React.js</div>
+                        <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
+                        <span style="color: var(--accent-green);">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Node.js</div>
+                        <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+                        <span style="color: var(--accent-green);">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Express.js</div>
+                        <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+                        <span style="color: var(--accent-green);">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">Tailwind CSS</div>
+                        <div class="bar"><div class="bar-fill" style="width: 75%"></div></div>
+                        <span style="color: var(--accent-green);">75%</span>
+                    </div>
+
+                    <h3 style="color: var(--accent-purple); margin-top: 25px;">Tools & Platforms</h3>
+                    <ul>
+                        <li><span class="highlight">Git</span> - Version control and collaboration</li>
+                        <li><span class="highlight">Docker</span> - Containerization and deployment</li>
+                        <li><span class="highlight">Azure</span> - Microsoft cloud platform services</li>
+                        <li><span class="highlight">AWS</span> - Amazon Web Services cloud computing</li>
+                        <li><span class="highlight">GCP</span> - Google Cloud Platform services</li>
+                        <li><span class="highlight">Linux</span> - Operating system administration</li>
+                        <li><span class="highlight">VMware</span> - Virtualization technology</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-purple); margin-top: 25px;">Databases</h3>
+                    <ul>
+                        <li><span class="highlight">MongoDB</span> - Document-oriented NoSQL database</li>
+                        <li><span class="highlight">SQL Server</span> - Microsoft relational database management</li>
+                        <li><span class="highlight">Redis</span> - In-memory data structure store</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-purple); margin-top: 25px;">Certifications</h3>
+                    <ul>
+                        <li>CISCO - Endpoint Security</li>
+                        <li>CISCO - NDG Linux Essentials</li>
+                        <li>LinkedIn Learning - Linux Internals</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="prompt">ls projects/</div>
+                <div class="output">
+                    <h2>Featured Projects</h2>
+
+                    <div class="project-card">
+                        <div class="project-title">🛡️ Centralized Windows Firewall Manager</div>
+                        <p>Managed firewall rules for all endpoints from a centralized web console. Comprehensive security solution allowing administrators to control network access across multiple Windows machines from a single interface.</p>
+                        <p style="margin-top: 10px;"><strong style="color: var(--accent-purple);">Key Features:</strong></p>
+                        <ul>
+                            <li>Real-time firewall rule management</li>
+                            <li>Centralized administration console</li>
+                            <li>Multi-endpoint support</li>
+                            <li>Azure cloud integration</li>
+                            <li>Real-time communication via Socket.io</li>
+                        </ul>
+                        <div style="margin-top: 10px;">
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <p style="margin-top: 10px;">
+                            <a href="https://github.com/thisisharshavardhan/Centralized-Application-context-aware-firewall" class="link" target="_blank">View on GitHub →</a>
+                        </p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">📱 Food Label Analyzer</div>
+                        <p>Developed a mobile application to analyze food labels from images and identify potentially harmful or unhealthy ingredients using advanced OCR technology.</p>
+                        <p style="margin-top: 10px;"><strong style="color: var(--accent-purple);">Key Features:</strong></p>
+                        <ul>
+                            <li>Image-based food label scanning</li>
+                            <li>OCR text extraction and analysis</li>
+                            <li>Ingredient health assessment</li>
+                            <li>User-friendly Android interface</li>
+                            <li>Real-time analysis results</li>
+                        </ul>
+                        <div style="margin-top: 10px;">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">OCR</span>
+                            <span class="tech-tag">Image Processing</span>
+                        </div>
+                        <p style="margin-top: 10px;">
+                            <a href="https://github.com/thisisharshavardhan/Label-scanner" class="link" target="_blank">View on GitHub →</a>
+                        </p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">🏢 Product Management & ERP System</div>
+                        <p>Designed and developed a comprehensive web application for Product Management, Supply Chain, and ERP Systems with responsive and dynamic user interfaces.</p>
+                        <p style="margin-top: 10px;"><strong style="color: var(--accent-purple);">Key Features:</strong></p>
+                        <ul>
+                            <li>Complete product lifecycle management</li>
+                            <li>Supply chain optimization</li>
+                            <li>Enterprise resource planning</li>
+                            <li>Responsive web design</li>
+                            <li>Database integration with SQL and MongoDB</li>
+                        </ul>
+                        <div style="margin-top: 10px;">
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="prompt">cat contact.info</div>
+                <div class="output">
+                    <h2>Get In Touch</h2>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <div class="contact-label">📧 EMAIL</div>
+                            <a href="mailto:thisisharshavardhan@gmail.com" class="link">thisisharshavardhan@gmail.com</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">📱 PHONE</div>
+                            <a href="tel:9059694492" class="link">9059694492</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">💼 LINKEDIN</div>
+                            <a href="https://www.linkedin.com/in/thisisharshavardhan/" class="link" target="_blank">linkedin.com/in/thisisharshavardhan</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">🐙 GITHUB</div>
+                            <a href="https://github.com/thisisharshavardhan" class="link" target="_blank">github.com/thisisharshavardhan</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">🌐 WEBSITE</div>
+                            <a href="https://harshavardhan.tech" class="link" target="_blank">harshavardhan.tech</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-label">📍 LOCATION</div>
+                            <span style="color: var(--text-primary);">Andhra Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <section class="section" style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 40px;">
+                <div class="prompt">echo "Thanks for visiting!"</div>
+                <div class="output" style="text-align: center;">
+                    <p style="color: var(--text-secondary);">© 2025 Harsha Vardhan Kondru. All Rights Reserved.</p>
+                    <p style="color: var(--accent-green); margin-top: 10px;">Built with ❤️ using HTML & CSS</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate skill bars on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.bar-fill');
+                    skillBars.forEach(bar => {
+                        bar.style.width = bar.style.width;
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const skillsSection = document.querySelector('#skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Add active state to nav links
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.background = '';
+                link.style.color = '';
+                link.style.borderColor = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.background = 'var(--bg-primary)';
+                    link.style.color = 'var(--accent-green)';
+                    link.style.borderColor = 'var(--accent-green)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1cm, top=0.8cm, right=1cm, bottom=0.8cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Harsha Vardhan Kondru} % Your Name
+\newcommand{\course}{Computer Science and Engineering} % Your Program
+%\newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{9059694472} % Your Phone Number
+\newcommand{\emaila}{thisisharshavardhan@gmail.com} %Email 1
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+{
+
+\begin{center}
+    \textbf{\LARGE \name} \\[1em]
+   {\large +91-\phone} \textbar\ \href{mailto:\emaila}{{\large \emaila}} \\[0.5em]
+
+   \href{https://www.linkedin.com/in/thisisharshavardhan}{LinkedIn} \textbar\ 
+  \href{https://github.com/thisisharshavardhan}{GitHub} \textbar\ 
+  \href{https://thisisharshavardhan.me}{Portfolio}
+
+
+\end{center}
+
+
+\noindent
+}
+\vspace{-10mm}
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      { Bachelor of Technology (B.Tech) - Computer Science and Engineering}{2027}
+      {Vishnu Institute of Technology, Bhimavaram, Andhra Pradesh, India }{}
+      \vspace{-3mm}
+     \resumeSubheading
+      { Diploma in Computer Engineering}{ 2024}
+      {A.A.N.M \& V.V.R.S.R Polytechnic, Gudlavalleru, Andhra Pradesh, India}{}
+  \resumeSubHeadingListEnd
+  
+\vspace{-7.2mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+\resumeSubheading
+      { Internship}{Gudlavalleru, Andhra Pradesh, India}
+      {SBL Solutions}{11/2023 – 05/2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+   \item {Designed and developed a web application for \textmd{\textbf{Product Management, Supply Chain, and ERP Systems}}}
+    \item {Built \textmd{\textbf{responsive and dynamic user interfaces}}, ensuring seamless front-end and back-end integration}
+    \item {Worked closely with the development team to \textmd{\textbf{optimize performance}} and improve user experience}
+    \item {\textmd{\textbf{Deployed}} the application on cloud platforms using \textmd{\textbf{Azure}} services}
+    \item {Developed and maintained features using \textmd{\textbf{Express.js, Node.js, React.js, SQL, and MongoDB}}}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+\resumeProject
+      { Yatra Suraksha -- Tourist Safety Monitoring \& Incident Response System}
+      {Smart tourist safety monitoring platform -- Backend API.}
+      {\href{https://github.com/Yatra-Suraksha/YATRA-SURAKSHA-BACKEND}{\textcolor{blue}{View on GitHub}}}{}
+\vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Developed the backend service using \textmd{\textbf{Node.js/Express}} with a \textmd{\textbf{modular architecture}} for maintainable code}
+        \item {Implemented \textmd{\textbf{RESTful APIs}} for user management, incident reporting, status tracking, and admin actions, consumed by the mobile app and admin portal}
+        \item {Integrated with external services such as \textmd{\textbf{Google Maps}} and \textmd{\textbf{real-time Socket.io}} channels to support live location tracking and incident updates}
+        \item {Added \textmd{\textbf{authentication, authorization middleware}}, and input validation to ensure secure and reliable handling of safety-critical data}
+      \resumeItemListEnd
+    \vspace{-3.5mm}
+
+\resumeProject
+      { Food Label Analyser}
+      {Backend for Label Analyzer -- extracts and analyzes ingredients from food label images to assess health impact}
+      {\href{https://github.com/thisisharshavardhan/Label-scanner}{\textcolor{blue}{View on GitHub}}}{}
+\vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Developed a \textmd{\textbf{Node.js/Express API}} that ingests \textmd{\textbf{OCR-extracted text}} from food labels and returns structured ingredient analysis}
+        \item {Used \textmd{\textbf{MongoDB}} to persist ingredient, product, and health-risk metadata, enabling \textmd{\textbf{fast lookups}} and re-use of previous analyses}
+      \resumeItemListEnd
+    \vspace{-3.5mm}
+    
+\resumeProject
+      { Centralized Windows Firewall Manager}
+      {Managed firewall rules for all endpoints from a centralized web console.}
+      { \href{https://github.com/Central-App-Context-Aware-Firewall/Centralized-Application-context-aware-firewall}{\textcolor{blue}{View on GitHub}}}{}
+\vspace{-1.5mm}
+      \resumeItemListStart
+        \item {Implemented the \textmd{\textbf{firewall management API}} using \textmd{\textbf{Node.js/Express}} to orchestrate rules and policies on Windows}
+        \item {Applied \textmd{\textbf{granular firewall rules at the application level}} for precise security control}
+        \item {Developed the project using \textmd{\textbf{MERN stack, Python, Azure, PowerShell}}, and \textmd{\textbf{Socket.io}} for real-time communication}
+      \resumeItemListEnd
+      \vspace{-3.5mm}
+
+  \resumeSubHeadingListEnd
+\vspace{-7.5mm}
+
+
+
+
+
+
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, Rust, C/C++, Kotlin, Java, Python, Bash} \\  
+     \textbf{Mobile Dev}{: Kotlin (Android Native)} \\ 
+     \textbf{Tools \& Platforms}{: Git, Docker, Postman, n8n, Cloud (AWS, Azure, GCP), VMware, Linux} \\
+     \textbf{Databases}{: MongoDB, SQL Server, Redis} \\ 
+     \textbf{Web Dev}{: MERN stack, Tailwind CSS} \\
+     \textbf{Backend Skills}{: REST APIs, JWT/OAuth, Express.js, Microservices, Caching (Redis), DB Schema Design, Docker, Nginx, Socket.io} \\
+     \textbf{Security}{: Familiar with OWASP Top 10 and common web vulnerabilities}
+}
+}
+ \end{itemize}
+ \vspace{-7.5mm}
+
+
+
+
+%----------- Certifications -----------------
+\section{\textbf{Certifications}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{CISCO - Endpoint Security}{}{}
+\resumePOR{CISCO - NDG Linux Essentials}{}{}
+\resumePOR{LinkedIn Learning - Exploring Linux Internals}{}{}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+
+% %-----------Achievements-----------------
+% \section{\textbf{Achievements}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Achievement } % Award
+%     {description} % Event
+%     {Event dates} %Event Year
+    
+% \resumePOR{Achievement } % Award
+%     {description} % Event
+%     {Event dates} %Event Year
+% \resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
