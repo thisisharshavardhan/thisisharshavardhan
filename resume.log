@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.29)  15 JAN 2026 08:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.12.29)  19 JAN 2026 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,11 +1111,11 @@ LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
-(Font)              using `T1/cmr/bx/sc' instead on input line 239.
+(Font)              using `T1/cmr/bx/sc' instead on input line 241.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
-(Font)              using `T1/cmr/bx/sc' instead on input line 258.
+(Font)              using `T1/cmr/bx/sc' instead on input line 260.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1138,7 +1138,7 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 Here is how much of TeX's memory you used:
  32875 strings out of 476182
  658473 string characters out of 5795594
- 1956975 words of memory out of 5000000
+ 1958975 words of memory out of 5000000
  54317 multiletter control sequences out of 15000+600000
  593783 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1152,7 +1152,7 @@ fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf
 /fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc1200.pf
 b>
-Output written on resume.pdf (1 page, 196368 bytes).
+Output written on resume.pdf (1 page, 197779 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
